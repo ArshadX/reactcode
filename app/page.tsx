@@ -1,14 +1,8 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Blog from "@/components/Blog";
-import Brands from "@/components/Brands";
-import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
-import Hero from "@/components/Hero";
-import Video from "@/components/Video";
+"use client";
 import { IBM_Plex_Sans } from "@next/font/google";
-
+import SideBar from "../components/Sidebar";
+import ScrollUp from "@/components/Common/ScrollUp";
+import Main from "@/components/Main";
 const inter = IBM_Plex_Sans({
   weight: ["300"],
   subsets: ["latin"],
@@ -18,13 +12,18 @@ const inter = IBM_Plex_Sans({
 export default function Home() {
   return (
     <>
+      <main className="grid grid-cols-8 gap-0 divide-x ">
+        <section className="col-end-2 bg-yellow">
+          <SideBar />
+        </section>
+        <section className="col-start-2 col-end-8  bg-primary">
+          <Main />
+        </section>
+        <section className="col-start-8 bg-body-color">
+          <SideBar />
+        </section>
+      </main>
       <ScrollUp />
-      <Hero />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Features />
-      <Video />
-      <Contact />
     </>
   );
 }

@@ -4,8 +4,16 @@ const menuData: Menu[] = [
   {
     id: 1,
     title: "Home",
-    path: "/",
+    path: "",
     newTab: false,
+    submenu: [
+      {
+        id: 1,
+        title: "Home",
+        path: "",
+        newTab: false,
+      },
+    ],
   },
   {
     id: 2,

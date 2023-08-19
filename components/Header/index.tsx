@@ -38,10 +38,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header top-0 left-0 z-40 flex w-full items-center bg-transparent ${
+        className={`header border-gray-800 z-1 top-0 left-0 flex w-full items-center border-b bg-dark ${
           sticky
             ? "!fixed !z-[9999] !bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm !transition dark:!bg-primary dark:!bg-opacity-20"
-            : "absolute"
+            : "relative"
         }`}
       >
         <div className="container">
@@ -50,27 +50,16 @@ const Header = () => {
               <Link
                 href="/"
                 className={`header-logo block w-full ${
-                  sticky ? "py-5 lg:py-2" : "py-8"
+                  sticky ? "py-2 lg:py-2" : "py-2"
                 } `}
               >
-                <div className="flex w-52 flex-row items-center">
+                <div className="flex w-40 flex-row items-center">
                   <Image
-                    src="/images/logo/RGDLogo1.png"
+                    src="/images/logo/logo.png"
                     alt="logo"
-                    width={140}
-                    height={30}
-                    className="h-14 w-auto dark:hidden"
+                    width={400}
+                    height={400}
                   />
-                  <Image
-                    src="/images/logo/RGDLogo1.png"
-                    alt="logo"
-                    width={100}
-                    height={100}
-                    className="hidden h-14 w-auto dark:block"
-                  />
-                  <h1 className="ml-2 mt-2 font-bold text-black dark:text-white">
-                    Ready Go Drivers
-                  </h1>
                 </div>
               </Link>
             </div>
@@ -100,7 +89,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -155,18 +144,6 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0">
-                <Link
-                  href="/"
-                  className="hidden py-3 px-7 text-base font-bold text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link>
-                <Link
-                  href="/"
-                  className="ease-in-up hidden rounded-md bg-primary py-3 px-8 text-base font-bold text-white transition duration-300 hover:bg-opacity-90 hover:shadow-signUp md:block md:px-9 lg:px-6 xl:px-9"
-                >
-                  Sign Up
-                </Link>
                 <div>
                   <ThemeToggler />
                 </div>
