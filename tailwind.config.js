@@ -1,10 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx}",
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   darkMode: "class",
   theme: {
     container: {
@@ -20,6 +16,8 @@ module.exports = {
       primary: "#4A6CF7",
       yellow: "#FBB040",
       "body-color": "#959CB1",
+      red: "#E04F5F",
+      slate: "#1e293b",
     },
     screens: {
       xs: "450px",
@@ -50,3 +48,4 @@ module.exports = {
   },
   plugins: [],
 };
+

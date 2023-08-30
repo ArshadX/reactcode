@@ -1,0 +1,95 @@
+import { Menu } from "@/types/menu";
+const menuData: Menu[] = [
+  {
+    id: 1,
+    title: "Header",
+    path: "/",
+    newTab: false,
+    submenu: [
+      {
+        id: 1,
+        title: "Footer",
+        path: "",
+        newTab: false,
+      },
+    ],
+  },
+  {
+    id: 2,
+    title: "Push Notification",
+    // path: "/about",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 3,
+    title: "Navbar Toggler",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 4,
+    title: "Cool Backgrounds",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 5,
+    title: "Dropdown",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 6,
+    title: "Search bar",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 7,
+    title: "FlatList",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 8,
+    title: "WhatsApp Chats List hellodd",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 9,
+    title: "Camera",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 10,
+    title: "device info",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 11,
+    title: "device info",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+  {
+    id: 12,
+    title: "device info",
+    // path: "/contact",
+    path: "/",
+    newTab: false,
+  },
+];
+export default menuData;

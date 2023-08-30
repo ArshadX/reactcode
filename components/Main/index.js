@@ -1,12 +1,26 @@
 import React from "react";
 
-const index = () => {
+const index = ({ content }) => {
   return (
-    <main>
-      <div className="container bg-white">
-        <h1 className="text-lg text-black">hello main page</h1>
-      </div>
-    </main>
+    <>
+      <main className="">
+        {content.map((ele) => ele)}
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+        <h1 className="text-9xl font-extrabold text-white">helooo</h1>
+      </main>
+    </>
   );
 };
 
