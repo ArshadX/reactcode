@@ -2,7 +2,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { colors } from "@/app/constants/constants";
 import Button from "@/components/Button";
-const index = ({ menuData, navbarToggleHandler, navbarOpen, openIndex, onPress }) => {
+const Index = ({ menuData, navbarToggleHandler, navbarOpen, openIndex, onPress }) => {
   const [navigationHistory, setnavigationHistory] = useState([]);
 
   return (
@@ -78,12 +78,14 @@ const index = ({ menuData, navbarToggleHandler, navbarOpen, openIndex, onPress }
         </ul>
       </nav>
       <div className="ml-2">
-        {navigationHistory.map((ele) => (
-          <text className="text-sm text-white">{ele} &#62;</text>
+        {navigationHistory.map((ele, index) => (
+          <text className="text-sm text-white" key={ele + index}>
+            {ele} &#62;
+          </text>
         ))}
       </div>
     </div>
   );
 };
 
-export default index;
+export default Index;

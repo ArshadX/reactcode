@@ -1,6 +1,6 @@
 import menuData from "./menuData";
 import { useState } from "react";
-const index = ({ onPress, left }) => {
+const Index = ({ onPress, left }) => {
   const [navigationHistory, setNavigationHistory] = useState([]);
   return (
     <>
@@ -27,4 +27,4 @@ const index = ({ onPress, left }) => {
   );
 };
 
-export default index;
+export default Index;
