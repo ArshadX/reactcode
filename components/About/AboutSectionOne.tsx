@@ -25,31 +25,27 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="Are you looking for Skilled Truck Drivers?"
-                paragraph="Recruit our Certified Professional Truck Drivers and reduce your down time and losses"
+                title="If you don't want to use npm libraries, we are here to help you"
+                paragraph="All type of logics and algorithms available here and it's expanding"
                 mb="44px"
               />
 
-              <div
-                className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0"
-                data-wow-delay=".15s"
-              >
+              <div className="wow fadeInUp mb-12 max-w-[570px] lg:mb-0" data-wow-delay=".15s">
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="Experienced" />
-                    <List text="Certified Professional Truck Drivers" />
-                    <List text="Multinational Experience" />
+                    <List text="Efficient Data Structure code" />
+                    <List text="Specially written for react" />
+                    <List text="Follows life cycle methods at its best" />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="English Proficient" />
+                    <List text="Algorithm for search and many more" />
                   </div>
                 </div>
                 <div className="my-4">
                   <Link
                     href="#"
-                    className="rounded-md bg-black/80 py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/50 dark:bg-white/20 dark:text-white dark:hover:bg-white/30"
-                  >
+                    className="rounded-md bg-black/80 py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/50 dark:bg-white/20 dark:text-white dark:hover:bg-white/30">
                     Learn More
                   </Link>
                 </div>
@@ -58,15 +54,9 @@ const AboutSectionOne = () => {
 
             <div className="w-full px-4 lg:w-1/2">
               <div
-                className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
-                data-wow-delay=".2s"
-              >
-                <Image
-                  src={driverLogo}
-                  alt="about-image"
-                  fill
-                  className="mx-auto max-w-full lg:mr-0"
-                />
+                className="wow fadeInUp relative mx-auto aspect-[720/528] max-w-[600px] shadow-md"
+                data-wow-delay=".2s">
+                <Image src={"/images/hero/codeimg.svg"} alt="about-image" fill className="mx-auto max-w-full lg:mr-0" />
               </div>
             </div>
           </div>
@@ -77,3 +67,4 @@ const AboutSectionOne = () => {
 };
 
 export default AboutSectionOne;
+
