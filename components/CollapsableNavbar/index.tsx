@@ -2,36 +2,43 @@ import Link from "next/link";
 import React, { useState } from "react";
 import { colors } from "@/app/constants/constants";
 import Button from "@/components/Button";
-const Index = ({ menuData, navbarToggleHandler, navbarOpen, openIndex, onPress }) => {
+const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
   const [navigationHistory, setnavigationHistory] = useState([]);
-
+  const [openIndex, setOpenIndex] = useState(-1);
+  const handleSubmenu = (index) => {
+    if (openIndex === index) {
+      setOpenIndex(-1);
+    } else {
+      setOpenIndex(index);
+    }
+  };
   return (
-    <div className="flex items-center bg-dark/30 backdrop-blur">
+    <div className="flex items-center bg-dark/30 backdrop-blur lg:hidden">
       <button
-        onClick={navbarToggleHandler}
+        onClick={sidebarToggleHandler}
         id="navbarToggler"
         aria-label="Mobile Menu"
         className="relative inline rounded-lg px-3 py-[6px] ring-primary focus:ring-2 lg:hidden ">
         <span
           className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-            navbarOpen ? " top-[7px] rotate-45" : " "
+            sidebarOpen ? " top-[7px] rotate-45" : " "
           }`}
         />
         <span
           className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-            navbarOpen ? "opacity-0 " : " "
+            sidebarOpen ? "opacity-0 " : " "
           }`}
         />
         <span
           className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 dark:bg-white ${
-            navbarOpen ? " top-[-8px] -rotate-45" : " "
+            sidebarOpen ? " top-[-8px] -rotate-45" : " "
           }`}
         />
       </button>
       <nav
         id="navbarCollapse"
         className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
-          navbarOpen ? "visibility top-full opacity-100" : "invisible top-[120%] opacity-0"
+          sidebarOpen ? "visibility top-full opacity-100" : "invisible top-[120%] opacity-0"
         }`}>
         <ul className="block scroll-smooth lg:flex lg:space-x-12">
           {menuData.map((menuItem, index) => (

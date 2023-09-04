@@ -14,17 +14,7 @@ const ToggledSidebar = ({ menuDataSidebar, handleContent }) => {
   const sideBarToggleHandler = () => {
     setSidebar(!sidebar);
   };
-  return (
-    <div className=" lg:hidden ">
-      <CollasableNavbar
-        openIndex={openIndex}
-        navbarOpen={sidebar}
-        navbarToggleHandler={sideBarToggleHandler}
-        menuData={menuDataSidebar}
-        onPress={handleContent}
-      />
-    </div>
-  );
+  return <div className="lg:hidden "></div>;
 };
 
 export default ToggledSidebar;
