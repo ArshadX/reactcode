@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import menuData from "./menuData";
+import ThemeToggler from "./ThemeToggler";
 
 const Header = () => {
   // Navbar toggle
@@ -55,8 +56,9 @@ const Header = () => {
                 </div>
               </Link>
             </div>
-            <div className="flex w-full items-center justify-between px-4">
-              <div>
+
+            <div className="flex w-full items-center">
+              <>
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -126,8 +128,43 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
-              </div>
+              </>
             </div>
+          </div>
+        </div>
+        <div className="absolute right-32 top-1/2 block translate-y-[-50%] px-3 py-[6px]">
+          <div className="flex flex-row justify-evenly gap-7">
+            <a id="twitter" href="/" aria-label="social-link" className=" text-[#CED3F6] hover:text-twitterBlue">
+              <svg width="25" height="20" viewBox="0 0 16 16" className="fill-current">
+                <path d="M16.3024 2.26027L17.375 1.0274C17.6855 0.693493 17.7702 0.436644 17.7984 0.308219C16.9516 0.770548 16.1613 0.924658 15.6532 0.924658H15.4556L15.3427 0.821918C14.6653 0.282534 13.8185 0 12.9153 0C10.9395 0 9.3871 1.48973 9.3871 3.21062C9.3871 3.31336 9.3871 3.46747 9.41532 3.57021L9.5 4.0839L8.90726 4.05822C5.29435 3.95548 2.33065 1.13014 1.85081 0.642123C1.06048 1.92637 1.5121 3.15925 1.99194 3.92979L2.95161 5.36815L1.42742 4.5976C1.45565 5.67637 1.90726 6.52397 2.78226 7.14041L3.54435 7.65411L2.78226 7.93665C3.2621 9.24658 4.33468 9.78596 5.125 9.99144L6.16935 10.2483L5.18145 10.8647C3.60081 11.8921 1.625 11.8151 0.75 11.738C2.52823 12.8682 4.64516 13.125 6.1129 13.125C7.21371 13.125 8.03226 13.0223 8.22984 12.9452C16.1331 11.25 16.5 4.82877 16.5 3.54452V3.36473L16.6694 3.26199C17.629 2.44007 18.0242 2.00342 18.25 1.74658C18.1653 1.77226 18.0524 1.82363 17.9395 1.84932L16.3024 2.26027Z" />
+              </svg>
+            </a>
+            <a id="github" href="/" aria-label="social-link" className=" text-[#CED3F6] hover:text-white">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="20"
+                fill="currentColor"
+                className="fill-current"
+                viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+              </svg>
+            </a>
+            <a
+              id="linkedIn"
+              href="https://www.linkedin.com/company/react-codes/"
+              aria-label="social-link"
+              className=" text-[#CED3F6] hover:text-primary">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="25"
+                height="20"
+                fill="currentColor"
+                className="fill-current"
+                viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+              </svg>
+            </a>
           </div>
         </div>
       </header>

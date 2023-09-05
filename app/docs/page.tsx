@@ -26,7 +26,7 @@ const Dashboard = () => {
         menuData={menuDataSidebar}
         onPress={() => console.log("menudata clicked sidebar")}
       />
-      <main className="grid grid-cols-12 divide-x-0 divide-body-color/50">
+      <main id="docs" className="grid grid-cols-12 divide-x-0 divide-body-color/50">
         <section className="col-span-3 hidden h-screen w-full overflow-y-scroll  scroll-smooth bg-dark/30  backdrop-blur-sm lg:block">
           <SideBar onPress={handleContent} left={true} />
         </section>

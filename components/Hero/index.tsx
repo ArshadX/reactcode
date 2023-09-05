@@ -40,8 +40,8 @@ const Hero = () => {
 
         <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-40">
           <div className="text-center">
-            <h1 className="text-gray-900 text-4xl font-bold tracking-tight sm:text-6xl">
-              Build your web and mobile applications with ease using
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Build your web and mobile applications with ease using &nbsp;
               <a href="/" className="text-red">
                 React Code
               </a>
@@ -51,7 +51,7 @@ const Hero = () => {
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-8">
               <Link
-                href="/dashboard"
+                href="/docs"
                 className="rounded-md bg-red py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80">
                 Get started
               </Link>

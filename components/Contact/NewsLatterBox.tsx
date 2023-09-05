@@ -2,14 +2,10 @@ const NewsLatterBox = () => {
   return (
     <div
       className="wow fadeInUp relative z-10 rounded-md bg-primary/[3%] p-8 dark:bg-primary/10 sm:p-11 lg:p-8 xl:p-11"
-      data-wow-delay=".2s"
-    >
-      <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Subscribe to receive future updates
-      </h3>
+      data-wow-delay=".2s">
+      <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">Subscribe to receive future updates</h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base font-medium leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+        Stay informed with our subscription service and receive regular updates on our latest features codes and components.
       </p>
       <form>
         <input
@@ -30,26 +26,12 @@ const NewsLatterBox = () => {
           className="duration-80 mb-4 w-full cursor-pointer rounded-md border border-transparent bg-primary py-3 px-6 text-center text-base font-medium text-white outline-none transition ease-in-out hover:bg-opacity-80 hover:shadow-signUp focus-visible:shadow-none"
         />
         <p className="text-center text-base font-medium leading-relaxed text-body-color">
-          No spam guaranteed, So please don’t send any spam mail.
+          No spam guaranteed, So please don't send any spam mail.
         </p>
       </form>
       <div className="absolute top-0 left-0 z-[-1]">
-        <svg
-          width="370"
-          height="596"
-          viewBox="0 0 370 596"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <mask
-            id="mask0_88:141"
-            style={{ maskType: "alpha" }}
-            maskUnits="userSpaceOnUse"
-            x="0"
-            y="0"
-            width="370"
-            height="596"
-          >
+        <svg width="370" height="596" viewBox="0 0 370 596" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <mask id="mask0_88:141" style={{ maskType: "alpha" }} maskUnits="userSpaceOnUse" x="0" y="0" width="370" height="596">
             <rect width="370" height="596" rx="2" fill="#1D2144" />
           </mask>
           <g mask="url(#mask0_88:141)">
@@ -94,8 +76,7 @@ const NewsLatterBox = () => {
               y1="63.5059"
               x2="81.144"
               y2="41.5072"
-              gradientUnits="userSpaceOnUse"
-            >
+              gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
@@ -105,63 +86,27 @@ const NewsLatterBox = () => {
               y1="501.301"
               x2="8.69936"
               y2="464.391"
-              gradientUnits="userSpaceOnUse"
-            >
+              gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint2_linear_88:141"
-              x1="338"
-              y1="167"
-              x2="349.488"
-              y2="200.004"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint2_linear_88:141" x1="338" y1="167" x2="349.488" y2="200.004" gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint3_linear_88:141"
-              x1="369.5"
-              y1="-53"
-              x2="369.5"
-              y2="89.9999"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint3_linear_88:141" x1="369.5" y1="-53" x2="369.5" y2="89.9999" gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint4_linear_88:141"
-              x1="411.5"
-              y1="-78"
-              x2="411.5"
-              y2="64.9999"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint4_linear_88:141" x1="411.5" y1="-78" x2="411.5" y2="64.9999" gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint5_linear_88:141"
-              x1="372.5"
-              y1="-69"
-              x2="372.5"
-              y2="73.9999"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint5_linear_88:141" x1="372.5" y1="-69" x2="372.5" y2="73.9999" gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
-            <linearGradient
-              id="paint6_linear_88:141"
-              x1="409.5"
-              y1="-102"
-              x2="409.5"
-              y2="40.9999"
-              gradientUnits="userSpaceOnUse"
-            >
+            <linearGradient id="paint6_linear_88:141" x1="409.5" y1="-102" x2="409.5" y2="40.9999" gradientUnits="userSpaceOnUse">
               <stop stopColor="white" />
               <stop offset="1" stopColor="white" stopOpacity="0" />
             </linearGradient>
@@ -173,3 +118,4 @@ const NewsLatterBox = () => {
 };
 
 export default NewsLatterBox;
+

@@ -18,6 +18,7 @@ module.exports = {
       "body-color": "#959CB1",
       red: "#E04F5F",
       slate: "#1e293b",
+      twitterBlue: "#6CADDE",
     },
     screens: {
       xs: "450px",
