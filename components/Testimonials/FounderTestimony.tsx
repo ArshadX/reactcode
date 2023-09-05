@@ -1,5 +1,4 @@
 import Image from "next/image";
-import SectionTitle from "../Common/SectionTitle";
 
 export default function Testimony() {
   return (
@@ -9,13 +8,13 @@ export default function Testimony() {
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
         <figure className="mt-10">
           <h1 className="text-center font-sans text-4xl font-extrabold tracking-tight text-white sm:text-6xl">
-            "Irritated from web search!"
+            &ldquo;Irritated from web search!&rdquo;
           </h1>
           <blockquote className=" text-center text-xl font-semibold leading-8 text-white/80 sm:text-2xl sm:leading-9">
             <p>
               Everyone spend time in searching for solutions on the web but It takes time to find the solutions for your code bugs
-              or sometimes we want build a feature that needed advance algorithms and you don't find exactly what you want on the
-              web. I faced this problem too that's why I build this library to make development easy
+              or sometimes we want build a feature that needed advance algorithms and you don&apos;t find exactly what you want on
+              the web. I faced this problem too that&apos;s why I build this library to make development easy
             </p>
           </blockquote>
           <figcaption className="mt-10 flex flex-row items-start justify-center space-x-4">
@@ -28,7 +27,7 @@ export default function Testimony() {
             />
             <div className="mt-4 flex flex-col justify-start ">
               <div className="text-lg font-semibold text-white">Mohammad Arshad</div>
-              <div className=" text-white/80">Creater of React Codes</div>
+              <div className="text-white/80">Creater of React Codes</div>
             </div>
           </figcaption>
         </figure>
