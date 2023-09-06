@@ -22,8 +22,8 @@ export default function Testimony() {
               className="h-20 w-auto rounded-full"
               src="/images/creater_picture.jpg"
               alt="creater picture"
-              width={10}
-              height={10}
+              width={928}
+              height={928}
             />
             <div className="mt-4 flex flex-col justify-start ">
               <div className="text-lg font-semibold text-white">Mohammad Arshad</div>
