@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import { imagelist } from "@/types/imagelist";
-import { imageList } from "@/app/constants/constants";
 var Carousel = require("react-responsive-carousel").Carousel;
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 const Video = () => {
@@ -22,10 +21,7 @@ const Video = () => {
 
         <div className="-mx-4 flex flex-wrap">
           <div className="w-full px-4">
-            <div
-              className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-              data-wow-delay=".15s"
-            >
+            <div className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md" data-wow-delay=".15s">
               <div className="relative aspect-[77/40] items-center justify-center bg-dark backdrop-sepia-0">
                 <Carousel
                   autoPlay={true}
@@ -34,15 +30,8 @@ const Video = () => {
                   showStatus={false}
                   transitionTime={3000}
                   showArrows={false}
-                  showThumbs={false}
-                >
-                  {imageList.map((image: imagelist, index: number) => (
-                    <Image
-                      src={image.default}
-                      alt="video image"
-                      key={image.default.height + index}
-                    />
-                  ))}
+                  showThumbs={false}>
+                  <h1>Hello</h1>
                 </Carousel>
               </div>
             </div>
@@ -57,3 +46,4 @@ const Video = () => {
 };
 
 export default Video;
+

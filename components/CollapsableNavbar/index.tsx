@@ -1,6 +1,5 @@
 import Link from "next/link";
 import React, { useState } from "react";
-import { colors } from "@/app/constants/constants";
 import Button from "@/components/Button";
 const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
   const [navigationHistory, setnavigationHistory] = useState([]);

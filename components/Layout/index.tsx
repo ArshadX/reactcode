@@ -14,7 +14,11 @@ const Layout = () => {
     setSidebarOpen(!sidebarOpen);
   };
   const handleContent = (title: string) => {
-    setContent([<text className="text-9xl">{title}</text>]);
+    setContent([
+      <text className="text-9xl" key={title + 1}>
+        {title}
+      </text>,
+    ]);
   };
   return (
     <>

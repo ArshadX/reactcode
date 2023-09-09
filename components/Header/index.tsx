@@ -26,7 +26,8 @@ const Header = () => {
     if (window.scrollY >= 70) {
       setSticky(true);
     }
-  });
+    return () => window.removeEventListener("scroll", handleStickyNavbar);
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
