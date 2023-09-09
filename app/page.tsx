@@ -1,10 +1,6 @@
-"use client";
-
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Contact from "@/components/Contact";
-import Features from "@/components/Features";
+import React from "react";
 import Hero from "@/components/Hero";
+import AboutSectionOne from "@/components/About/AboutSectionOne";
 import Testimony from "@/components/Testimonials/FounderTestimony";
 
 export default function Home() {
@@ -12,8 +8,7 @@ export default function Home() {
     <>
       <Hero />
       <AboutSectionOne />
-      <Testimony />
-      <Contact />
+      <Testimony /> // fix unsupported style bg-indigo-300
     </>
   );
 }

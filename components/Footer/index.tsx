@@ -1,5 +1,9 @@
+import React from "react";
+
 import Image from "next/image";
 import Link from "next/link";
+import NewsLatterSimple from "../Contact/NewsLatterSimple";
+
 const date = new Date();
 const Footer = () => {
   return (
@@ -7,7 +11,7 @@ const Footer = () => {
       <footer className="wow fadeInUp relative z-10 bg-primary bg-opacity-5 pt-16 md:pt-20 lg:pt-24" data-wow-delay=".1s">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
+            <div className="w-full px-4 md:w-1/2 lg:w-[16%] xl:w-2/12">
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
@@ -47,34 +51,38 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-2 sm:w-1/2 md:w-1/2 md:pl-4 md:pr-2 lg:w-[16%] xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">Develop</h2>
+                <h2 className="mb-10 text-xl font-normal text-black dark:text-white">Develop</h2>
                 <ul>
                   <li>
-                    <a href="/" className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">
+                    <a href="/" className="mb-2 inline-block text-base font-extralight text-body-color hover:text-primary">
                       Components
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">
+                    <a
+                      href="/"
+                      className="mb-2 inline-block text-base font-extralight leading-3 text-body-color hover:text-primary">
                       APIs
                     </a>
                   </li>
                   <li>
-                    <a href="/" className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">
+                    <a
+                      href="/"
+                      className="mb-2 inline-block text-base font-extralight leading-3 text-body-color hover:text-primary">
                       Algorithms
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
+            <div className="w-full px-2 sm:w-1/2 md:w-1/2 lg:w-[16%] xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">Terms</h2>
+                <h2 className="mb-10 text-xl font-normal text-black dark:text-white">Terms</h2>
                 <ul>
                   <li>
-                    <a href="/" className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">
+                    <a href="/" className="mb-2 inline-block text-base font-extralight text-body-color hover:text-primary">
                       Privacy Policy
                     </a>
                   </li>
@@ -82,17 +90,20 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
+            <div className="w-full px-2 md:w-1/2 lg:w-[16%] xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">Company</h2>
+                <h2 className="mb-10 text-xl font-normal text-black dark:text-white">Company</h2>
                 <ul>
                   <li>
-                    <a href="/" className="mb-4 inline-block text-base font-medium text-body-color hover:text-primary">
+                    <a href="/" className="mb-2 inline-block text-base font-extralight text-body-color hover:text-primary">
                       About
                     </a>
                   </li>
                 </ul>
               </div>
+            </div>
+            <div className="mb-12 px-2 lg:mb-16">
+              <NewsLatterSimple />
             </div>
           </div>
         </div>
