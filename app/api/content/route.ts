@@ -1,6 +1,7 @@
-import { NextResponse } from "next/server";
+import { NextApiRequest } from "next";
+import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(req: Request) {
+export async function GET(req) {
   const data = {
     name: "Zaheen",
     gender: "Male",
