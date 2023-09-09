@@ -8,7 +8,8 @@ export default function Home() {
     <>
       <Hero />
       <AboutSectionOne />
-      <Testimony /> // fix unsupported style bg-indigo-300
+      <Testimony />
+      {/** fix unsupported style bg-indigo-300 */}
     </>
   );
 }

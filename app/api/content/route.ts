@@ -6,7 +6,7 @@ export async function GET(req: Request) {
     gender: "Male",
     education: "Noida Institute of Engineering and Technology",
     qualification: "BTech",
-    image: "zaheen.jpg",
+    image: "/images/zaheen.jpg",
   };
-  return NextResponse.json;
+  return NextResponse.json(data);
 }
