@@ -43,10 +43,10 @@ import { NextRequest, NextResponse } from "next/server";
 //   return NextResponse.json(res);
 // }
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   console.log("POST");
-  const { searchParams } = new URL(request.url);
-  const email = searchParams.get("email");
+  const params = request.nextUrl.searchParams;
+  const email = params.get("email");
   const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {
     method: "POST",
     headers: {
