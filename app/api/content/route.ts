@@ -8,6 +8,7 @@ export async function GET() {
     education: "Noida Institute of Engineering and Technology",
     qualification: "BTech",
     image: "/images/zaheen.jpg",
+    user: process.env.DB_USER,
   };
   return NextResponse.json(data);
 }
