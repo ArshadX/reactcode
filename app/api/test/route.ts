@@ -1,26 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
 
-export async function GET(request: Request) {
-  console.log("GET");
-  const headers: HeadersInit = [
-    ["Accept", "*/*"],
-    ["content-type", "application/json"],
-    ["Access-Control-Request-Headers", "*"],
-    ["api-key", `${process.env.DB_Auth}`],
-  ];
-  const bodyGET = {
-    collection: "emailList",
-    database: "subscriptions",
-    dataSource: "Cluster0",
-    filter: { id: 1 },
-  };
-  const res = await fetch(`${process.env.baseUrl}/action/findOne`, { headers, body: JSON.stringify(bodyGET), method: "POST" });
-  if (res.ok) {
-    const data = await res.json();
-    console.log(data);
-    return NextResponse.json(data);
-  }
-}
+// export async function GET(request: Request) {
+//   console.log("GET");
+//   const headers: HeadersInit = [
+//     ["Accept", "*/*"],
+//     ["content-type", "application/json"],
+//     ["Access-Control-Request-Headers", "*"],
+//     ["api-key", `${process.env.DB_Auth}`],
+//   ];
+//   const bodyGET = {
+//     collection: "emailList",
+//     database: "subscriptions",
+//     dataSource: "Cluster0",
+//     filter: { id: 1 },
+//   };
+//   const res = await fetch(`${process.env.baseUrl}/action/findOne`, { headers, body: JSON.stringify(bodyGET), method: "POST" });
+//   if (res.ok) {
+//     const data = await res.json();
+//     console.log(data);
+//     return NextResponse.json(data);
+//   }
+// }
 
 // export async function POST(request: Request) {
 //
