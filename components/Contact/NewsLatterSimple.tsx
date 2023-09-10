@@ -12,7 +12,7 @@ const NewsLatterSimple = () => {
       //     console.log(data), alert(data);
       //   })
       //   .catch((err) => alert(err));
-      await fetch("/api/content", { method: "GET" })
+      await fetch("/api/test", { method: "GET" })
         .then((res) => res.json())
         .then((data) => {
           console.log(data), alert(data);

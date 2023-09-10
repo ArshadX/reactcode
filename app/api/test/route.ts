@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 
 const headers: HeadersInit = [
   ["Accept", "*/*"],
@@ -13,7 +13,7 @@ const bodyGET = {
   filter: { id: 1 },
 };
 
-export async function GET() {
+export async function GET(request: Request) {
   console.log("GET");
 
   const res = await fetch(`${process.env.baseUrl}/action/findOne`, { headers, body: JSON.stringify(bodyGET), method: "POST" });
@@ -24,23 +24,23 @@ export async function GET() {
   }
 }
 
-export async function POST(request: Request) {
-  console.log("POST");
-  const { searchParams } = new URL(request.url);
-  const email = searchParams.get("email");
-  const bodyPOST = {
-    collection: "emailList",
-    database: "subscriptions",
-    dataSource: "Cluster0",
-    filter: { id: 1 },
-    update: { $push: { data: email } },
-  };
-  const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {
-    headers,
-    body: JSON.stringify(bodyPOST),
-    method: "POST",
-  })
-    .then((res) => res.json())
-    .catch((err) => err.json());
-  return NextResponse.json(res);
-}
+// export async function POST(request: Request) {
+//   console.log("POST");
+//   const { searchParams } = new URL(request.url);
+//   const email = searchParams.get("email");
+//   const bodyPOST = {
+//     collection: "emailList",
+//     database: "subscriptions",
+//     dataSource: "Cluster0",
+//     filter: { id: 1 },
+//     update: { $push: { data: email } },
+//   };
+//   const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {
+//     headers,
+//     body: JSON.stringify(bodyPOST),
+//     method: "POST",
+//   })
+//     .then((res) => res.json())
+//     .catch((err) => err.json());
+//   return NextResponse.json(res);
+// }
