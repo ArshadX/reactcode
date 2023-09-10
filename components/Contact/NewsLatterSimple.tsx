@@ -6,7 +6,13 @@ const NewsLatterSimple = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateEmail(email.current)) {
-      await fetch(`/api/test/?email=${email.current}`, { method: "POST" })
+      // await fetch(`/api/test/?email=${email.current}`, { method: "POST" })
+      //   .then((res) => res.json())
+      //   .then((data) => {
+      //     console.log(data), alert(data);
+      //   })
+      //   .catch((err) => alert(err));
+      await fetch("/api/content", { method: "GET" })
         .then((res) => res.json())
         .then((data) => {
           console.log(data), alert(data);
