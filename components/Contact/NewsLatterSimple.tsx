@@ -6,7 +6,7 @@ const NewsLatterSimple = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (validateEmail(email.current)) {
-      await fetch(`/api/test/?email=${email.current}`, { method: "GET" })
+      await fetch(`/api/test/?email=${email.current}`)
         .then((res) => res.json())
         .then((data) => {
           console.log(data), alert(data);

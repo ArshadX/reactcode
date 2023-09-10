@@ -43,7 +43,7 @@ import { NextRequest, NextResponse } from "next/server";
 //   return NextResponse.json(res);
 // }
 
-export async function GET(request: Request) {
+export async function POST(request: Request) {
   console.log("POST");
   const { searchParams } = new URL(request.url);
   const email = searchParams.get("email");
