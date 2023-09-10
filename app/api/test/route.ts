@@ -4,7 +4,7 @@ const headers: HeadersInit = [
   ["Accept", "*/*"],
   ["content-type", "application/json"],
   ["Access-Control-Request-Headers", "*"],
-  ["api-key", process.env.DB_Auth],
+  ["api-key", `${process.env.DB_Auth}`],
 ];
 const bodyGET = {
   collection: "emailList",
@@ -14,7 +14,7 @@ const bodyGET = {
 };
 
 export async function GET() {
-  console.log("Hello");
+  console.log("GET");
 
   const res = await fetch(`${process.env.baseUrl}/action/findOne`, { headers, body: JSON.stringify(bodyGET), method: "POST" });
   if (res.ok) {
@@ -25,8 +25,7 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
-  console.log("Hello");
-
+  console.log("POST");
   const { searchParams } = new URL(request.url);
   const email = searchParams.get("email");
   const bodyPOST = {
@@ -36,10 +35,12 @@ export async function POST(request: Request) {
     filter: { id: 1 },
     update: { $push: { data: email } },
   };
-  const res = await fetch(`${process.env.baseUrl}/action/updateOne`, { headers, body: JSON.stringify(bodyPOST), method: "POST" });
-  if (res.ok) {
-    const data = await res.json();
-    console.log(data);
-    return NextResponse.json(data);
-  }
+  const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {
+    headers,
+    body: JSON.stringify(bodyPOST),
+    method: "POST",
+  })
+    .then((res) => res.json())
+    .catch((err) => err.json());
+  return NextResponse.json(res);
 }
