@@ -1,23 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import { clearTimeout } from "timers";
+import React, { useRef, useState } from "react";
 
-const index = ({ children }: { children: React.ReactNode }) => {
+const Index = ({ children }: { children: React.ReactNode }) => {
   const inputRef = useRef(null);
-  let clearTimeOutRef = null;
   const [copied, setCopied] = useState(false);
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(inputRef.current.innerText).then(() => setCopied(true));
-      clearTimeOutRef = setTimeout(() => setCopied(false), 1000);
     } catch (err) {
       alert(err);
     }
   };
-  useEffect(() => {
-    return clearTimeout(clearTimeOutRef);
-  }, []);
+
   return (
     <div className="relative z-[0] mx-10 rounded-lg bg-dark p-1 shadow-lg">
       <span className="float-right">
@@ -44,4 +39,4 @@ const index = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export default index;
+export default Index;
