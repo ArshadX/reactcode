@@ -10,8 +10,8 @@ import bg_xs from "@/public/images/hero/backgroundxs.svg";
 const Hero = () => {
   return (
     <>
-      <main id="home" className="relative isolate bg-dark/30 py-1.5 px-6 backdrop-blur-lg lg:px-4">
-        <div className="absolute right-0 bottom-0 -z-10 overflow-hidden" aria-hidden="true">
+      <main id="home" className="relative isolate bg-dark/30 px-6 py-1.5 backdrop-blur-lg lg:px-4">
+        <div className="absolute bottom-0 right-0 -z-10 overflow-hidden" aria-hidden="true">
           <Image
             src={bg_lg}
             alt="background Image lg"
@@ -40,19 +40,19 @@ const Hero = () => {
 
         <div className="mx-auto max-w-5xl py-32 sm:py-48 lg:py-40">
           <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+            <text className=" bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-6xl">
               Build your web and mobile applications with ease using &nbsp;
               <a href="/" className="text-red">
                 React Code
               </a>
-            </h1>
-            <p className="text-center text-base font-extralight text-white md:text-3xl lg:text-5xl">
+            </text>
+            <p className="bg-gradient-to-r from-gray-100 to-gray-300 bg-clip-text  text-center text-2xl font-extralight sm:text-3xl md:text-4xl lg:text-5xl">
               Common components and logics that used in every applications out there.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-8">
               <Link
                 href="/docs"
-                className="rounded-md bg-red py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80">
+                className=" rounded-md bg-gradient-to-br from-gray-100 to-gray-400 px-8  py-4 text-base font-semibold text-black shadow-lg drop-shadow-lg duration-300 ease-in-out hover:to-gray-500">
                 Get started
               </Link>
             </div>

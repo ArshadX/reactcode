@@ -58,7 +58,7 @@ const menuData: Menu[] = [
   },
   {
     id: 8,
-    title: "WhatsApp Chats List hellodd",
+    title: "WhatsApp Chats List",
     // path: "/contact",
     path: "/",
     newTab: false,

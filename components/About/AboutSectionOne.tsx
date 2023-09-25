@@ -18,7 +18,7 @@ const AboutSectionOne = () => {
   );
 
   return (
-    <section id="about" className="pt-16 md:pt-20 lg:pt-28">
+    <section className="pt-16 md:pt-20 lg:pt-28">
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
@@ -44,7 +44,7 @@ const AboutSectionOne = () => {
                 <div className="my-4">
                   <Link
                     href="#"
-                    className="rounded-md bg-black/80 py-4 px-8 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/50 dark:bg-white/20 dark:text-white dark:hover:bg-white/30">
+                    className="rounded-md bg-black/80 px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/50 dark:bg-white/20 dark:text-white dark:hover:bg-white/30">
                     Learn More
                   </Link>
                 </div>

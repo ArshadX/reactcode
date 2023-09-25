@@ -39,7 +39,7 @@ const Layout = () => {
           <SideBar onPress={handleContent} left={false} />
         </section>
       </main>
-      <div className="!absolute bottom-0 left-0 right-0 z-[-2]">
+      <div className="!absolute bottom-0 left-0 right-0 z-[-999]">
         <img src="/images/video/shape.svg" alt="shape" className="w-full" />
       </div>
     </>

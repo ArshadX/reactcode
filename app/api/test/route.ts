@@ -22,29 +22,7 @@ import { NextRequest, NextResponse } from "next/server";
 //   }
 // }
 
-// export async function POST(request: Request) {
-//
-//   const { searchParams } = new URL(request.url);
-//   const email = searchParams.get("email");
-//   const bodyPOST = {
-//     collection: "emailList",
-//     database: "subscriptions",
-//     dataSource: "Cluster0",
-//     filter: { id: 1 },
-//     update: { $push: { data: email } },
-//   };
-//   const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {
-//     headers,
-//     body: JSON.stringify(bodyPOST),
-//     method: "POST",
-//   })
-//     .then((res) => res.json())
-//     .catch((err) => err.json());
-//   return NextResponse.json(res);
-// }
-
 export async function POST(request: NextRequest) {
-  console.log("POST");
   const params = request.nextUrl.searchParams;
   const email = params.get("email");
   const res = await fetch(`${process.env.baseUrl}/action/updateOne`, {

@@ -95,7 +95,7 @@ const Footer = () => {
                 <h2 className="mb-10 text-xl font-normal text-black dark:text-white">Company</h2>
                 <ul>
                   <li>
-                    <a href="/" className="mb-2 inline-block text-base font-extralight text-body-color hover:text-primary">
+                    <a href="/about" className="mb-2 inline-block text-base font-extralight text-body-color hover:text-primary">
                       About
                     </a>
                   </li>
@@ -155,7 +155,7 @@ const Footer = () => {
             </defs>
           </svg>
         </div>
-        <div className="absolute left-0 bottom-24 z-[-1]">
+        <div className="absolute bottom-24 left-0 z-[-1]">
           <svg width="79" height="94" viewBox="0 0 79 94" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect
               opacity="0.3"

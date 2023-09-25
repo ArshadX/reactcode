@@ -12,7 +12,7 @@ const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
     }
   };
   return (
-    <div className="flex items-center bg-dark/30 backdrop-blur lg:hidden">
+    <div className="relative z-[999] flex items-center bg-dark/30 backdrop-blur lg:hidden">
       <button
         onClick={sidebarToggleHandler}
         id="navbarToggler"
@@ -36,10 +36,10 @@ const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
       </button>
       <nav
         id="navbarCollapse"
-        className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white py-4 px-6 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
+        className={`navbar absolute right-0 z-[999] w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:bg-transparent lg:p-0 lg:opacity-100 ${
           sidebarOpen ? "visibility top-full opacity-100" : "invisible top-[120%] opacity-0"
         }`}>
-        <ul className="block scroll-smooth lg:flex lg:space-x-12">
+        <ul className=" block scroll-smooth lg:flex lg:space-x-12">
           {menuData.map((menuItem, index) => (
             <li key={menuItem.id} className="group relative">
               {menuItem.path ? (
@@ -53,7 +53,7 @@ const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
                 <>
                   <a
                     onClick={() => handleSubmenu(index)}
-                    className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:py-6 lg:px-0">
+                    className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:opacity-70 dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6">
                     {menuItem.title}
                     <span className="pl-3">
                       <svg width="15" height="14" viewBox="0 0 15 14">
@@ -65,7 +65,7 @@ const Index = ({ menuData, sidebarToggleHandler, sidebarOpen, onPress }) => {
                     </span>
                   </a>
                   <div
-                    className={`submenu relative top-full left-0 rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
+                    className={`submenu relative left-0 top-full rounded-md bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${
                       openIndex === index ? "block" : "hidden"
                     }`}>
                     {menuItem.submenu.map((submenuItem) => (
